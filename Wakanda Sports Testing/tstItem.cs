@@ -94,7 +94,10 @@ namespace Wakanda_Sports_Testing
             AnItem.Name = TestData;
             Assert.AreEqual(AnItem.Name, TestData);
         }
-
+    }
+    [TestClass]
+    public class tstItemTest
+    {
         [TestMethod]
         public void FindMethodOK()
         {
@@ -113,7 +116,127 @@ namespace Wakanda_Sports_Testing
             Boolean OK = true;
             Int32 ItemNo = 77;
             Found = AnItem.Find(ItemNo);
-            if(AnItem.ItemNo !=77)
+            if (AnItem.ItemNo != 77)
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestNameFound()
+        {
+            clsItem AnItem = new clsItem();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 ItemNo = 77;
+            Found = AnItem.Find(ItemNo);
+            if (AnItem.Name != "Mercurial Dream Superfly 8")
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestDateAddedFound()
+        {
+            clsItem AnItem = new clsItem();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 ItemNo = 77;
+            Found = AnItem.Find(ItemNo);
+            if (AnItem.DateAdded != Convert.ToDateTime("01/10/2020"))
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestCategoryFound()
+        {
+            clsItem AnItem = new clsItem();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 ItemNo = 77;
+            Found = AnItem.Find(ItemNo);
+            if (AnItem.Category != "Football Boots")
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestBrandFound()
+        {
+            clsItem AnItem = new clsItem();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 ItemNo = 77;
+            Found = AnItem.Find(ItemNo);
+            if (AnItem.Brand != "Nike")
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestSizeFound()
+        {
+            clsItem AnItem = new clsItem();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 ItemNo = 77;
+            Found = AnItem.Find(ItemNo);
+            if (AnItem.Size != "UK 6 (EU 39)")
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestPriceFound()
+        {
+            clsItem AnItem = new clsItem();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 ItemNo = 77;
+            Found = AnItem.Find(ItemNo);
+            if (AnItem.Price != 85)
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestSerialNumberFound()
+        {
+            clsItem AnItem = new clsItem();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 ItemNo = 77;
+            Found = AnItem.Find(ItemNo);
+            if (AnItem.SerialNumber != 1367)
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestActiveFound()
+        {
+            clsItem AnItem = new clsItem();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 ItemNo = 77;
+            Found = AnItem.Find(ItemNo);
+            if (AnItem.Active != true)
             {
                 OK = false;
             }
