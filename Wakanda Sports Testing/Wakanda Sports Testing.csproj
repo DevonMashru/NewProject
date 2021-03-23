@@ -49,13 +49,17 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clsStock.cs" />
-    <Compile Include="tstStock.cs" />
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="TestingClasses.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WakandaSportsClasses\WakandaSportsClasses.csproj">
+      <Project>{9963AAAA-EB73-4CE1-B016-703BD6C5FE18}</Project>
+      <Name>WakandaSportsClasses</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
