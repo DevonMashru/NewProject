@@ -5,7 +5,7 @@ using WakandaSportsClasses;
 namespace Wakanda_Sports_Testing
 {
     [TestClass]
-    public class TstItem
+    public class tstItem
     {
         [TestMethod]
         public void InstanceOK()
@@ -36,7 +36,7 @@ namespace Wakanda_Sports_Testing
         public void ItemNoOK()
         {
             clsItem AnItem = new clsItem();
-            Int32 TestData = 12;
+            Int32 TestData = 77;
             AnItem.ItemNo = TestData;
             Assert.AreEqual(AnItem.ItemNo, TestData);
         }
@@ -99,10 +99,16 @@ namespace Wakanda_Sports_Testing
         public void FindMethodOK()
         {
             clsItem AnItem = new clsItem();
-            bool Found = false;
+            Boolean Found = false;
             Int32 ItemNo = 77;
-            Found = ItemNo.Find(ItemNo);
+            Found = AnItem.Find(ItemNo);
             Assert.IsTrue(Found);
+        }
+
+        [TestMethod]
+        public void TestItemNoFound()
+        {
+
         }
     }
 }
