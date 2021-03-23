@@ -122,16 +122,26 @@ namespace WakandaSportsClasses
         }
         public bool Find(int ItemNo)
         {
-            mItemNo = 77;
-            mName = "Mercurial Dream Superfly 8";
-            mDateAdded = Convert.ToDateTime("01/10/2020");
-            mCategory = "Football Boots";
-            mBrand = "Nike";
-            mSize = "UK 6 (EU 39)";
-            mPrice = 85;
-            mSerialNumber = 1367;
-            mActive = true;
-            return true;
+            clsDataConnection DB = new clsDataConnection();
+            DB.AddParameter("@ItemNo", ItemNo);
+            DB.Execute("sproc_tblStockFootballBoots_FilterByItemNo");
+            if (DB.Count ==1)
+            {
+                mItemNo = 77;
+                mName = "Mercurial Dream Superfly 8";
+                mDateAdded = Convert.ToDateTime("01/10/2020");
+                mCategory = "Football Boots";
+                mBrand = "Nike";
+                mSize = "UK 6 (EU 39)";
+                mPrice = 85;
+                mSerialNumber = 1367;
+                mActive = true;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
