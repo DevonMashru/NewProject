@@ -99,7 +99,7 @@ namespace Wakanda_Sports_Testing
         public void FindMethodOK()
         {
             clsItem AnItem = new clsItem();
-            Boolean Found = false;
+            bool Found = false;
             Int32 ItemNo = 77;
             Found = ItemNo.Find(ItemNo);
             Assert.IsTrue(Found);
