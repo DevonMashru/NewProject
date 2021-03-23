@@ -108,7 +108,16 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void TestItemNoFound()
         {
-
+            clsItem AnItem = new clsItem();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 ItemNo = 77;
+            Found = AnItem.Find(ItemNo);
+            if(AnItem.ItemNo !=77)
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
         }
     }
 }

@@ -120,8 +120,7 @@ namespace WakandaSportsClasses
                 mActive = value;
             }
         }
-
-        public bool Find(int itemNo)
+        public bool Find(int ItemNo)
         {
             return true;
         }
