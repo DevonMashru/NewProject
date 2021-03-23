@@ -5,7 +5,7 @@ using WakandaSportsClasses;
 namespace Wakanda_Sports_Testing
 {
     [TestClass]
-    public class TstItemNo
+    public class TstItem
     {
         [TestMethod]
         public void InstanceOK()
@@ -15,12 +15,12 @@ namespace Wakanda_Sports_Testing
         }
 
         [TestMethod]
-        public void NamePropertyOK()
+        public void ActivePropertyOK()
         {
             clsItem AnItem = new clsItem();
-            string TestData = "Football Shirts";
-            AnItem.Name = TestData;
-            Assert.AreEqual(AnItem.Name, TestData);
+            Boolean TestData = true;
+            AnItem.Active = TestData;
+            Assert.AreEqual(AnItem.Active, TestData);
         }
 
         [TestMethod]
@@ -30,6 +30,15 @@ namespace Wakanda_Sports_Testing
             DateTime TestData = DateTime.Now.Date;
             AnItem.DateAdded = TestData;
             Assert.AreEqual(AnItem.DateAdded, TestData);
+        }
+
+        [TestMethod]
+        public void ItemNoOK()
+        {
+            clsItem AnItem = new clsItem();
+            Int32 TestData = 12;
+            AnItem.ItemNo = TestData;
+            Assert.AreEqual(AnItem.ItemNo, TestData);
         }
 
         [TestMethod]
@@ -78,12 +87,12 @@ namespace Wakanda_Sports_Testing
         }
 
         [TestMethod]
-        public void ActivePropertyOK()
+        public void NamePropertyOK()
         {
             clsItem AnItem = new clsItem();
-            Boolean TestData = true;
-            AnItem.Active = TestData;
-            Assert.AreEqual(AnItem.Active, TestData);
+            string TestData = "Football Shirts";
+            AnItem.Name = TestData;
+            Assert.AreEqual(AnItem.Name, TestData);
         }
 
         [TestMethod]

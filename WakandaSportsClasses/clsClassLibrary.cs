@@ -14,6 +14,7 @@ namespace WakandaSportsClasses
         public string Size { get; set; }
         public int Price { get; set; }
         public int SerialNumber { get; set; }
+        public Int32 ItemNo { get; set; }
         public string Name { get; set; }
     }
 }
