@@ -8,7 +8,13 @@ namespace Wakanda_Sports_Testing
     public class tstItem
     {
         string Name = "Mercurial Dream Superfly 8";
-
+        string DateAdded = DateTime.Now.Date.ToString();
+        string Category = "Football Boots";
+        string Brand = "Nike";
+        string Size = "UK 6 (EU 39)";
+        Int32 Price = 85;
+        Int32 SerialNumber = 1367;
+               
         [TestMethod]
         public void InstanceOK()
         {

@@ -143,16 +143,9 @@ namespace WakandaSportsClasses
                 return false;
             }
         }
-        public string Valid(string Name,
-                            DateTime DateAdded,
-                            string Category,
-                            string Brand,
-                            string Size,
-                            Int32 Price,
-                            Int32 SerialNumber)
+        public string Valid(string name, string dateAdded, string category, string brand, string size, int price, int serialNumber)
         {
-
+            return "";
         }
-
     }
 }
