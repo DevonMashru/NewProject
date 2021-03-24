@@ -339,6 +339,42 @@ namespace Wakanda_Sports_Testing
         }
 
         [TestMethod]
+        public void DateAddedMin()
+        {
+            clsItem AnItem = new clsItem();
+            String Error = "aa";
+            DateTime TestDate;
+            TestDate = DateTime.Now.Date;
+            string DateAdded = TestDate.ToString();
+            Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void DateAddedMinLessOne()
+        {
+            clsItem AnItem = new clsItem();
+            String Error = "a";
+            DateTime TestDate;
+            TestDate = DateTime.Now.Date;
+            string DateAdded = TestDate.ToString();
+            Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void DateAddedMinPlusOne()
+        {
+            clsItem AnItem = new clsItem();
+            String Error = "12345678910";
+            DateTime TestDate;
+            TestDate = DateTime.Now.Date;
+            string DateAdded = TestDate.ToString();
+            Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
         public void DateAddedExtremeMin()
         {
             clsItem AnItem = new clsItem();
@@ -350,5 +386,19 @@ namespace Wakanda_Sports_Testing
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
             Assert.AreNotEqual(Error, "");
         }
+
+        [TestMethod]
+        public void DateAddedExtremeMax()
+        {
+            clsItem AnItem = new clsItem();
+            String Error = "";
+            DateTime TestDate;
+            TestDate = DateTime.Now.Date;
+            TestDate = TestDate.AddYears(100);
+            string DateAdded = TestDate.ToString();
+            Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
+            Assert.AreNotEqual(Error, "");
+        }
+
     }
-}
+}                                               
