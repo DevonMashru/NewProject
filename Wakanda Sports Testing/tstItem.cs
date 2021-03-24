@@ -401,5 +401,14 @@ namespace Wakanda_Sports_Testing
             Assert.AreNotEqual(Error, "");
         }
 
+        [TestMethod]
+        public void DateAddedInvalidData()
+        {
+            clsItem AnItem = new clsItem();
+            String Error = "";
+            string DateAdded = "this is not a date!";
+            Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
+            Assert.AreNotEqual(Error, "");
+        }
     }
 }                                               

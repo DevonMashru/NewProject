@@ -119,7 +119,10 @@ namespace WakandaSportsClasses
             {
                 mActive = value;
             }
-        }        
+        }
+
+        public DateTime DateTemp { get; private set; }
+
         public bool Find(int ItemNo)
         {
             clsDataConnection DB = new clsDataConnection();
@@ -154,17 +157,23 @@ namespace WakandaSportsClasses
             {
                 Error = Error + "The name must be less than 50 characters : ";
             }
-            DateTemp = Convert.ToDateTime(dateAdded);
-            if (DateTemp < DateTime.Now.Date)
+            try
             {
-                Error = Error + "The date cannot be in the past : ";
+                DateTemp = Convert.ToDateTime(dateAdded);
+                if (DateTemp < DateTime.Now.Date)
+                {
+                    Error = Error + "The date cannot be in the past : ";
+                }
+                if (DateTemp > DateTime.Now.Date)
+                {
+                    Error = Error + "The date cannot be in the future : ";
+                }
             }
-            if (DateTemp > DateTime.Now.Date)
+            catch
             {
-                Error = Error + "The date cannot be in the future : ";
+                Error = Error + "The date was not a valid data :";
             }
             return Error;
         }
-        public DateTime DateTemp { get; private set; }
     }
 }
