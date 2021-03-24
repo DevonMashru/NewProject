@@ -145,6 +145,11 @@ namespace WakandaSportsClasses
         }
         public string Valid(string name, string dateAdded, string category, string brand, string size, int price, int serialNumber)
         {
+            string Error = "";
+            if (Name.Length ==0)
+            {
+                Error = Error + "The Name may not be blank";
+            }
             return "";
         }
     }

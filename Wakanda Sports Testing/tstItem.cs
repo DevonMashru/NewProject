@@ -256,5 +256,15 @@ namespace Wakanda_Sports_Testing
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
             Assert.AreEqual(Error, "");
         }
+
+        [TestMethod]
+        public void NameMinLessOne()
+        {
+            clsItem AnItem = new clsItem();
+            String Error = "";
+            string Name = "";
+            Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
+            Assert.AreEqual(Error, "");
+        }
     }
 }
