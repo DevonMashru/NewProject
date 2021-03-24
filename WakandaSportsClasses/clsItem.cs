@@ -119,7 +119,7 @@ namespace WakandaSportsClasses
             {
                 mActive = value;
             }
-        }
+        }        
         public bool Find(int ItemNo)
         {
             clsDataConnection DB = new clsDataConnection();
@@ -145,12 +145,22 @@ namespace WakandaSportsClasses
         }
         public string Valid(string name, string dateAdded, string category, string brand, string size, int price, int serialNumber)
         {
-            string Error = "";
-            if (Name.Length ==0)
+            String Error = "";
+            if (name.Length == 0)
             {
-                Error = Error + "The Name may not be blank";
+                Error = Error + "The name may not be blank";
             }
-            return "";
+            if (name.Length > 50)
+            {
+                Error = Error + "The name must be less than 50 characters : ";
+            }
+            DateTemp = Convert.ToDateTime(dateAdded);
+            if (DateTemp < DateTime.Now.Date)
+            {
+                Error = Error + "The date cannot be in the past : ";
+            }
+            return Error;
         }
+        public DateTime DateTemp { get; private set; }
     }
 }
