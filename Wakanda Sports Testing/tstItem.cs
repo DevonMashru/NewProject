@@ -7,6 +7,8 @@ namespace Wakanda_Sports_Testing
     [TestClass]
     public class tstItem
     {
+        string Name = "Mercurial Dream Superfly 8";
+
         [TestMethod]
         public void InstanceOK()
         {
@@ -94,10 +96,7 @@ namespace Wakanda_Sports_Testing
             AnItem.Name = TestData;
             Assert.AreEqual(AnItem.Name, TestData);
         }
-    }
-    [TestClass]
-    public class tstItemTest
-    {
+    
         [TestMethod]
         public void FindMethodOK()
         {
@@ -241,6 +240,15 @@ namespace Wakanda_Sports_Testing
                 OK = false;
             }
             Assert.IsTrue(OK);
+        }
+    
+        [TestMethod]
+        public void ValidMethodOK()
+        {
+            clsItem AnItem = new clsItem();
+            String Error = "";
+            Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
+            Assert.AreEqual(Error, "");
         }
     }
 }

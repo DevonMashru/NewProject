@@ -125,7 +125,7 @@ namespace WakandaSportsClasses
             clsDataConnection DB = new clsDataConnection();
             DB.AddParameter("@ItemNo", ItemNo);
             DB.Execute("sproc_tblStockFootballBoots_FilterByItemNo");
-            if (DB.Count ==1)
+            if (DB.Count == 1)
             {
                 mItemNo = 77;
                 mName = "Mercurial Dream Superfly 8";
@@ -143,5 +143,16 @@ namespace WakandaSportsClasses
                 return false;
             }
         }
+        public string Valid(string Name,
+                            DateTime DateAdded,
+                            string Category,
+                            string Brand,
+                            string Size,
+                            Int32 Price,
+                            Int32 SerialNumber)
+        {
+
+        }
+
     }
 }
