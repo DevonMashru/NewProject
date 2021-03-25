@@ -49,6 +49,8 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsStockCollection.cs" />
+    <Compile Include="tstStockCollection.cs" />
     <Compile Include="tstStockMain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
