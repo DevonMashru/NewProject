@@ -125,6 +125,10 @@ namespace Wakanda_Sports_Testing
             TestItem.Brand = "Another Brand";
             TestItem.Size = "UK 8 (EU 44)";
             TestItem.Active = false;
+            AllStocks.ThisStock = TestItem;
+            AllStocks.Update();
+            AllStocks.ThisStock.Find(PrimaryKey);
+            Assert.AreEqual(AllStocks.ThisStock, TestItem);
         }
     }
 }

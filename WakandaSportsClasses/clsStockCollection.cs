@@ -35,6 +35,18 @@ namespace WakandaSportsClasses
             DB.AddParameter("@ItemNo", mThisStock.ItemNo);
             DB.Execute("sproc_tblStockFootballBoots_Delete");
         }
+        public void Update()
+        {
+            clsDataConnection DB = new clsDataConnection();
+            DB.AddParameter("ItemNo", mThisStock.ItemNo);
+            DB.AddParameter("Name", mThisStock.Name);
+            DB.AddParameter("DateAdded", mThisStock.DateAdded);
+            DB.AddParameter("Category", mThisStock.Category);
+            DB.AddParameter("Brand", mThisStock.Brand);
+            DB.AddParameter("Size", mThisStock.Size);
+            DB.AddParameter("Active", mThisStock.Active);
+            DB.Execute("sproc_tblStockFootballBoots_Update");
+        }
         public List<clsStock> StockList
         {
             get
