@@ -110,7 +110,7 @@ namespace Wakanda_Sports_Testing
             Boolean Found = false;
             Int32 ItemNo = 77;
             Found = AnItem.Find(ItemNo);
-            Assert.IsTrue(Found);
+            Assert.IsFalse(Found);
         }
 
         [TestMethod]
@@ -125,7 +125,7 @@ namespace Wakanda_Sports_Testing
             {
                 OK = false;
             }
-            Assert.IsTrue(OK);
+            Assert.IsFalse(OK);
         }
 
         [TestMethod]
@@ -140,7 +140,7 @@ namespace Wakanda_Sports_Testing
             {
                 OK = false;
             }
-            Assert.IsTrue(OK);
+            Assert.IsFalse(OK);
         }
 
         [TestMethod]
@@ -155,7 +155,7 @@ namespace Wakanda_Sports_Testing
             {
                 OK = false;
             }
-            Assert.IsTrue(OK);
+            Assert.IsFalse(OK);
         }
 
         [TestMethod]
@@ -170,7 +170,7 @@ namespace Wakanda_Sports_Testing
             {
                 OK = false;
             }
-            Assert.IsTrue(OK);
+            Assert.IsFalse(OK);
         }
 
         [TestMethod]
@@ -185,7 +185,7 @@ namespace Wakanda_Sports_Testing
             {
                 OK = false;
             }
-            Assert.IsTrue(OK);
+            Assert.IsFalse(OK);
         }
 
         [TestMethod]
@@ -200,7 +200,7 @@ namespace Wakanda_Sports_Testing
             {
                 OK = false;
             }
-            Assert.IsTrue(OK);
+            Assert.IsFalse(OK);
         }
 
         [TestMethod]
@@ -215,7 +215,7 @@ namespace Wakanda_Sports_Testing
             {
                 OK = false;
             }
-            Assert.IsTrue(OK);
+            Assert.IsFalse(OK);
         }
 
         [TestMethod]
@@ -230,7 +230,7 @@ namespace Wakanda_Sports_Testing
             {
                 OK = false;
             }
-            Assert.IsTrue(OK);
+            Assert.IsFalse(OK);
         }
 
         [TestMethod]
@@ -245,7 +245,7 @@ namespace Wakanda_Sports_Testing
             {
                 OK = false;
             }
-            Assert.IsTrue(OK);
+            Assert.IsFalse(OK);
         }
 
         [TestMethod]

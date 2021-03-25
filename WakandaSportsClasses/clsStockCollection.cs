@@ -20,14 +20,20 @@ namespace WakandaSportsClasses
         }
         public int Add()
         {
-            mThisStock.ItemNo = 123;
-            return mThisStock.ItemNo;
+            clsDataConnection DB = new clsDataConnection();
+            DB.AddParameter("Name", mThisStock.Name);
+            DB.AddParameter("DateAdded", mThisStock.DateAdded);
+            DB.AddParameter("Category", mThisStock.Category);
+            DB.AddParameter("Brand", mThisStock.Brand);
+            DB.AddParameter("Size", mThisStock.Size);
+            DB.AddParameter("Active", mThisStock.Active);
+            return DB.Execute("sproc_tblStockFootballBoots_Insert");
         }
         public void Delete()
         {
             clsDataConnection DB = new clsDataConnection();
             DB.AddParameter("@ItemNo", mThisStock.ItemNo);
-            DB.Execute("sproc_tblStockFootballBoots");
+            DB.Execute("sproc_tblStockFootballBoots_Delete");
         }
         public List<clsStock> StockList
         {
