@@ -103,5 +103,28 @@ namespace Wakanda_Sports_Testing
             Boolean Found = AllStocks.ThisStock.Find(PrimaryKey);
             Assert.IsTrue(Found);
         }
+
+        [TestMethod]
+        public void UpdateMethodOk()
+        {
+            clsStockCollection AllStocks = new clsStockCollection();
+            clsStock TestItem = new clsStock();
+            Int32 PrimaryKey = 0;
+            TestItem.Name = "Mercurial Dream Superfly 8";
+            TestItem.DateAdded = DateTime.Now.Date;
+            TestItem.Category = "Football Boots";
+            TestItem.Brand = "Nike";
+            TestItem.Size = "UK 6 (EU 39)";
+            TestItem.Active = true;
+            AllStocks.ThisStock = TestItem;
+            PrimaryKey = AllStocks.Add();
+            TestItem.ItemNo = PrimaryKey;
+            TestItem.Name = "Random Product Name 8";
+            TestItem.DateAdded = DateTime.Now.Date;
+            TestItem.Category = "Another Category";
+            TestItem.Brand = "Another Brand";
+            TestItem.Size = "UK 8 (EU 44)";
+            TestItem.Active = false;
+        }
     }
 }
