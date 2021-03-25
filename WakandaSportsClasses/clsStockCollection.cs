@@ -1,10 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace WakandaSportsClasses
 {
     public class clsStockCollection
     {
         List<clsStock> mStockList = new List<clsStock>();
+        public clsStock ThisStock { get; set; }
         public List<clsStock> StockList
         {
             get
@@ -27,6 +29,27 @@ namespace WakandaSportsClasses
 
             }
         }
-        public clsStock ThisStock { get; set; }
+        public clsStockCollection()
+        {
+            Int32 Index = 0;
+            Int32 RecordCount = 0;
+            clsDataConnection DB = new clsDataConnection();
+            DB.Execute("sproc_tblStockFootballBoots_SelectAll");
+            RecordCount = DB.Count;
+            while (Index < RecordCount)
+            {
+                clsStock AnStock = new clsStock();
+                AnStock.Active = Convert.ToBoolean(DB.DataTable.Rows[Index]["Active"]);
+                AnStock.Name = Convert.ToString(DB.DataTable.Rows[Index]["Name"]);
+                AnStock.DateAdded = Convert.ToDateTime(DB.DataTable.Rows[Index]["DateAdded"]);
+                AnStock.Category = Convert.ToString(DB.DataTable.Rows[Index]["Category"]);
+                AnStock.Brand = Convert.ToString(DB.DataTable.Rows[Index]["Brand"]);
+                AnStock.Size = Convert.ToString(DB.DataTable.Rows[Index]["Size"]);
+                AnStock.Price = Convert.ToInt32(DB.DataTable.Rows[Index]["Price"]);
+                AnStock.SerialNumber = Convert.ToInt32(DB.DataTable.Rows[Index]["SerialNumber"]);
+                mStockList.Add(AnStock);
+                Index++;
+            }
+        }
     }
 }

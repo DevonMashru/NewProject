@@ -36,15 +36,6 @@ namespace Wakanda_Sports_Testing
         }
 
         [TestMethod]
-        public void CountPropertyOK()
-        {
-            clsStockCollection AllStocks = new clsStockCollection();
-            Int32 SomeCount = 0;
-            AllStocks.Count = SomeCount;
-            Assert.AreEqual(AllStocks.Count, SomeCount);
-        }
-
-        [TestMethod]
         public void ThisStockPropertyOK()
         {
             clsStockCollection AllStocks = new clsStockCollection();
@@ -80,13 +71,6 @@ namespace Wakanda_Sports_Testing
             TestList.Add(TestItem);
             AllStocks.StockList = TestList;
             Assert.AreEqual(AllStocks.Count, TestList.Count);
-        }
-
-        [TestMethod]
-        public void TwoRecordPresent()
-        {
-            clsStockCollection AllStocks = new clsStockCollection();
-            Assert.AreEqual(AllStocks.Count, 2);
         }
     }
 }
