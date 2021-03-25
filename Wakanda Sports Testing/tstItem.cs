@@ -416,7 +416,7 @@ namespace Wakanda_Sports_Testing
         {
             clsItem AnItem = new clsItem();
             String Error = "";
-            string Category = "";
+            string Category = "a";
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
             Assert.AreEqual(Error, "");
         }
@@ -446,7 +446,7 @@ namespace Wakanda_Sports_Testing
         {
             clsItem AnItem = new clsItem();
             String Error = "";
-            string Category = "aaaaaaaaaaaaaaa";
+            string Category = "aaaaaaaaaaaaa";
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
             Assert.AreEqual(Error, "");
         }
@@ -456,7 +456,7 @@ namespace Wakanda_Sports_Testing
         {
             clsItem AnItem = new clsItem();
             String Error = "";
-            string Category = "aaaaaaaaaaaaaaaa";
+            string Category = "aaaaaaaaaaaaaaa";
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
             Assert.AreEqual(Error, "");
         }
@@ -466,7 +466,7 @@ namespace Wakanda_Sports_Testing
         {
             clsItem AnItem = new clsItem();
             String Error = "";
-            string Category = "aaaaaaaaaaaaaaaaa";
+            string Category = "aaaaaaaaaaaaaaa";
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
             Assert.AreEqual(Error, "");
         }
@@ -486,7 +486,7 @@ namespace Wakanda_Sports_Testing
         {
             clsItem AnItem = new clsItem();
             String Error = "";
-            string Brand = "";
+            string Brand = "a";
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
             Assert.AreEqual(Error, "");
         }
@@ -556,7 +556,7 @@ namespace Wakanda_Sports_Testing
         {
             clsItem AnItem = new clsItem();
             String Error = "";
-            string Size = "";
+            string Size = "a";
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
             Assert.AreEqual(Error, "");
         }
@@ -606,7 +606,7 @@ namespace Wakanda_Sports_Testing
         {
             clsItem AnItem = new clsItem();
             String Error = "";
-            string Size = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+            string Size = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
             Assert.AreEqual(Error, "");
         }

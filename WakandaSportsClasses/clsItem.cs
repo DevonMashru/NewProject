@@ -173,6 +173,30 @@ namespace WakandaSportsClasses
             {
                 Error = Error + "The date was not a valid data :";
             }
+            if (category.Length == 0)
+            {
+                Error = Error + "The name may not be blank";
+            }
+            if (category.Length > 15)
+            {
+                Error = Error + "The name must be less than 15 characters : ";
+            }
+            if (brand.Length == 0)
+            {
+                Error = Error + "The name may not be blank";
+            }
+            if (brand.Length > 10)
+            {
+                Error = Error + "The name must be less than 10 characters : ";
+            }
+            if (size.Length == 0)
+            {
+                Error = Error + "The name may not be blank";
+            }
+            if (size.Length > 30)
+            {
+                Error = Error + "The name must be less than 30 characters : ";
+            }
             return Error;
         }
     }
