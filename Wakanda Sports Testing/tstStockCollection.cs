@@ -31,5 +31,14 @@ namespace Wakanda_Sports_Testing
             TestItem.SerialNumber = 1367;
             TestItem.Active = true;
         }
+
+        [TestMethod]
+        public void CountPropertyOK()
+        {
+            clsStockCollection AllStocks = new clsStockCollection();
+            Int32 SomeCount = 0;
+            AllStocks.Count = SomeCount;
+            Assert.AreEqual(AllStocks.Count, SomeCount);
+        }
     }
 }
