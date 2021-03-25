@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace WakandaSportsClasses
 {
-    public class clsItem
+    public class clsStock
     {
-        public clsItem()
+        public clsStock()
         {
 
         }

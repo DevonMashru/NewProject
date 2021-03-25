@@ -5,7 +5,7 @@ using WakandaSportsClasses;
 namespace Wakanda_Sports_Testing
 {
     [TestClass]
-    public class tstItem
+    public class tstStock
     {
         string Name = "Mercurial Dream Superfly 8";
         string DateAdded = DateTime.Now.Date.ToString();
@@ -18,14 +18,14 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void InstanceOK()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             Assert.IsNotNull(AnItem);
         }
 
         [TestMethod]
         public void ActivePropertyOK()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             Boolean TestData = true;
             AnItem.Active = TestData;
             Assert.AreEqual(AnItem.Active, TestData);
@@ -34,7 +34,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void DateAddedPropertyOK()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             DateTime TestData = DateTime.Now.Date;
             AnItem.DateAdded = TestData;
             Assert.AreEqual(AnItem.DateAdded, TestData);
@@ -43,7 +43,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void ItemNoOK()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             Int32 TestData = 77;
             AnItem.ItemNo = TestData;
             Assert.AreEqual(AnItem.ItemNo, TestData);
@@ -52,7 +52,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void CategoryPropertyOK()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             string TestData = "Football Socks";
             AnItem.Category = TestData;
             Assert.AreEqual(AnItem.Category, TestData);
@@ -61,7 +61,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void BrandPropertyOK()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             string TestData = "Nike";
             AnItem.Brand = TestData;
             Assert.AreEqual(AnItem.Brand, TestData);
@@ -70,7 +70,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void SizePropertyOK()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             string TestData = "Large";
             AnItem.Size = TestData;
             Assert.AreEqual(AnItem.Size, TestData);
@@ -79,7 +79,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void PricePropertyOK()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             Int32 TestData = 13;
             AnItem.Price = TestData;
             Assert.AreEqual(AnItem.Price, TestData);
@@ -88,7 +88,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void SerialNumberPropertyOK()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             Int32 TestData = 1245;
             AnItem.SerialNumber = TestData;
             Assert.AreEqual(AnItem.SerialNumber, TestData);
@@ -97,7 +97,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void NamePropertyOK()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             string TestData = "Football Shirts";
             AnItem.Name = TestData;
             Assert.AreEqual(AnItem.Name, TestData);
@@ -106,7 +106,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void FindMethodOK()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             Boolean Found = false;
             Int32 ItemNo = 77;
             Found = AnItem.Find(ItemNo);
@@ -116,7 +116,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void TestItemNoFound()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             Boolean Found = false;
             Boolean OK = true;
             Int32 ItemNo = 77;
@@ -131,7 +131,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void TestNameFound()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             Boolean Found = false;
             Boolean OK = true;
             Int32 ItemNo = 77;
@@ -146,7 +146,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void TestDateAddedFound()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             Boolean Found = false;
             Boolean OK = true;
             Int32 ItemNo = 77;
@@ -161,7 +161,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void TestCategoryFound()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             Boolean Found = false;
             Boolean OK = true;
             Int32 ItemNo = 77;
@@ -176,7 +176,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void TestBrandFound()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             Boolean Found = false;
             Boolean OK = true;
             Int32 ItemNo = 77;
@@ -191,7 +191,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void TestSizeFound()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             Boolean Found = false;
             Boolean OK = true;
             Int32 ItemNo = 77;
@@ -206,7 +206,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void TestPriceFound()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             Boolean Found = false;
             Boolean OK = true;
             Int32 ItemNo = 77;
@@ -221,7 +221,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void TestSerialNumberFound()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             Boolean Found = false;
             Boolean OK = true;
             Int32 ItemNo = 77;
@@ -236,7 +236,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void TestActiveFound()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             Boolean Found = false;
             Boolean OK = true;
             Int32 ItemNo = 77;
@@ -251,7 +251,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void ValidMethodOK()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             String Error = "";
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
             Assert.AreEqual(Error, "");
@@ -260,7 +260,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void NameMin()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             String Error = "";
             string Name = "aa";
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
@@ -270,7 +270,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void NameMinLessOne()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             String Error = "";
             string Name = "a";
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
@@ -280,7 +280,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void NamePlusOne()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             String Error = "";
             string Name = "aaa";
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
@@ -290,7 +290,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void NameMax()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             String Error = "";
             string Name = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
@@ -300,7 +300,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void NameMaxLessOne()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             String Error = "";
             string Name = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
@@ -310,7 +310,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void NameMaxPlusOne()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             String Error = "";
             string Name = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
@@ -320,7 +320,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void NameMid()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             String Error = "";
             string Name = "aaaaaaaaaaaaaaaaaaaaaaaaa";
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
@@ -330,7 +330,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void NameExtremeMax()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             String Error = "";
             string Name = "";
             Name = Name.PadRight(500, 'a');
@@ -341,7 +341,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void DateAddedExtremeMin()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             String Error = "";
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
@@ -354,7 +354,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void DateAddedMinLessOne()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             String Error = "";
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
@@ -367,7 +367,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void DateAddedMin()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             String Error = "";
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
@@ -378,7 +378,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void DateAddedMinPlusOne()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             String Error = "";
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
@@ -391,7 +391,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void DateAddedExtremeMax()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             String Error = "";
             DateTime TestDate;
             TestDate = DateTime.Now.Date;
@@ -404,7 +404,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void DateAddedInvalidData()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             String Error = "";
             string DateAdded = "this is not a date!";
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
@@ -414,7 +414,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void CategoryMinLessOne()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             String Error = "";
             string Category = "a";
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
@@ -424,7 +424,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void CategoryMin()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             String Error = "";
             string Category = "a";
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
@@ -434,7 +434,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void CategoryMinPlusOne()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             String Error = "";
             string Category = "aa";
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
@@ -444,7 +444,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void CategoryMaxLessOne()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             String Error = "";
             string Category = "aaaaaaaaaaaaa";
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
@@ -454,7 +454,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void CategoryMax()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             String Error = "";
             string Category = "aaaaaaaaaaaaaaa";
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
@@ -464,7 +464,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void CategoryMaxPlusOne()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             String Error = "";
             string Category = "aaaaaaaaaaaaaaa";
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
@@ -474,7 +474,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void CategoryMid()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             String Error = "";
             string Category = "aaaaaaaaaa";
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
@@ -484,7 +484,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void BrandMinLessOne()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             String Error = "";
             string Brand = "a";
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
@@ -494,7 +494,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void BrandMin()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             String Error = "";
             string Brand = "a";
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
@@ -504,7 +504,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void BrandMinPlusOne()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             String Error = "";
             string Brand = "aa";
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
@@ -514,7 +514,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void BrandMaxLessOne()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             String Error = "";
             string Brand = "aaaaaaaaa";
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
@@ -524,7 +524,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void BrandMax()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             String Error = "";
             string Brand = "aaaaaaaaaa";
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
@@ -534,7 +534,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void BrandMaxPlusOne()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             String Error = "";
             string Brand = "aaaaaaaaa";
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
@@ -544,7 +544,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void BrandMid()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             String Error = "";
             string Brand = "aaaaa";
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
@@ -554,7 +554,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void SizeMinLessOne()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             String Error = "";
             string Size = "a";
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
@@ -564,7 +564,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void SizeMin()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             String Error = "";
             string Size = "a";
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
@@ -574,7 +574,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void SizeMinPlusOne()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             String Error = "";
             string Size = "aa";
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
@@ -584,7 +584,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void SizeMaxLessOne()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             String Error = "";
             string Size = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
@@ -594,7 +594,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void SizeMax()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             String Error = "";
             string Size = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
@@ -604,7 +604,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void SizeMaxPlusOne()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             String Error = "";
             string Size = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
@@ -614,7 +614,7 @@ namespace Wakanda_Sports_Testing
         [TestMethod]
         public void SizeMid()
         {
-            clsItem AnItem = new clsItem();
+            clsStock AnItem = new clsStock();
             String Error = "";
             string Size = "aaaaaaaaaaaaaaaa";
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
