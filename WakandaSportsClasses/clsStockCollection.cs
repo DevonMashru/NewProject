@@ -6,7 +6,30 @@ namespace WakandaSportsClasses
     public class clsStockCollection
     {
         List<clsStock> mStockList = new List<clsStock>();
-        public clsStock ThisStock { get; set; }
+        clsStock mThisStock = new clsStock();
+        public clsStock ThisStock
+        {
+            get
+            {
+                return mThisStock;
+            }
+            set
+            {
+                mThisStock = value;
+            }
+        }
+        public int Add()
+        {
+            clsDataConnection DB = new clsDataConnection();
+            DB.AddParameter("Name", mThisStock.Name);
+            DB.AddParameter("DateAdded", mThisStock.DateAdded);
+            DB.AddParameter("Category", mThisStock.Category);
+            DB.AddParameter("Brand", mThisStock.Brand);
+            DB.AddParameter("Size", mThisStock.Size);
+            DB.AddParameter("Price", mThisStock.Price);
+            DB.AddParameter("SerialNumber", mThisStock.SerialNumber);
+            return DB.Execute("sproc_tblStockFootballBoots_Insert");
+        }
         public List<clsStock> StockList
         {
             get
