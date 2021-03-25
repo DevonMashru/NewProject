@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WakandaSportsClasses
 {
-    class clsItemCollection
+    class clsStockCollection
     {
     }
 }
