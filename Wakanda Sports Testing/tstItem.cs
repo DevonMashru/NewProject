@@ -410,5 +410,215 @@ namespace Wakanda_Sports_Testing
             Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
             Assert.AreNotEqual(Error, "");
         }
+
+        [TestMethod]
+        public void CategoryMinLessOne()
+        {
+            clsItem AnItem = new clsItem();
+            String Error = "";
+            string Category = "";
+            Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void CategoryMin()
+        {
+            clsItem AnItem = new clsItem();
+            String Error = "";
+            string Category = "a";
+            Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void CategoryMinPlusOne()
+        {
+            clsItem AnItem = new clsItem();
+            String Error = "";
+            string Category = "aa";
+            Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void CategoryMaxLessOne()
+        {
+            clsItem AnItem = new clsItem();
+            String Error = "";
+            string Category = "aaaaaaaaaaaaaaa";
+            Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void CategoryMax()
+        {
+            clsItem AnItem = new clsItem();
+            String Error = "";
+            string Category = "aaaaaaaaaaaaaaaa";
+            Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void CategoryMaxPlusOne()
+        {
+            clsItem AnItem = new clsItem();
+            String Error = "";
+            string Category = "aaaaaaaaaaaaaaaaa";
+            Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void CategoryMid()
+        {
+            clsItem AnItem = new clsItem();
+            String Error = "";
+            string Category = "aaaaaaaaaa";
+            Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void BrandMinLessOne()
+        {
+            clsItem AnItem = new clsItem();
+            String Error = "";
+            string Brand = "";
+            Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void BrandMin()
+        {
+            clsItem AnItem = new clsItem();
+            String Error = "";
+            string Brand = "a";
+            Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void BrandMinPlusOne()
+        {
+            clsItem AnItem = new clsItem();
+            String Error = "";
+            string Brand = "aa";
+            Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void BrandMaxLessOne()
+        {
+            clsItem AnItem = new clsItem();
+            String Error = "";
+            string Brand = "aaaaaaaaa";
+            Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void BrandMax()
+        {
+            clsItem AnItem = new clsItem();
+            String Error = "";
+            string Brand = "aaaaaaaaaa";
+            Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void BrandMaxPlusOne()
+        {
+            clsItem AnItem = new clsItem();
+            String Error = "";
+            string Brand = "aaaaaaaaa";
+            Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void BrandMid()
+        {
+            clsItem AnItem = new clsItem();
+            String Error = "";
+            string Brand = "aaaaa";
+            Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void SizeMinLessOne()
+        {
+            clsItem AnItem = new clsItem();
+            String Error = "";
+            string Size = "";
+            Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void SizeMin()
+        {
+            clsItem AnItem = new clsItem();
+            String Error = "";
+            string Size = "a";
+            Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void SizeMinPlusOne()
+        {
+            clsItem AnItem = new clsItem();
+            String Error = "";
+            string Size = "aa";
+            Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void SizeMaxLessOne()
+        {
+            clsItem AnItem = new clsItem();
+            String Error = "";
+            string Size = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+            Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void SizeMax()
+        {
+            clsItem AnItem = new clsItem();
+            String Error = "";
+            string Size = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+            Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void SizeMaxPlusOne()
+        {
+            clsItem AnItem = new clsItem();
+            String Error = "";
+            string Size = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+            Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void SizeMid()
+        {
+            clsItem AnItem = new clsItem();
+            String Error = "";
+            string Size = "aaaaaaaaaaaaaaaa";
+            Error = AnItem.Valid(Name, DateAdded, Category, Brand, Size, Price, SerialNumber);
+            Assert.AreEqual(Error, "");
+        }
     }
-}                                               
+}                                  
