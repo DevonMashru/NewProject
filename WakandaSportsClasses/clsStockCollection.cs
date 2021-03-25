@@ -73,8 +73,6 @@ namespace WakandaSportsClasses
                 AnStock.Category = Convert.ToString(DB.DataTable.Rows[Index]["Category"]);
                 AnStock.Brand = Convert.ToString(DB.DataTable.Rows[Index]["Brand"]);
                 AnStock.Size = Convert.ToString(DB.DataTable.Rows[Index]["Size"]);
-                AnStock.Price = Convert.ToInt32(DB.DataTable.Rows[Index]["Price"]);
-                AnStock.SerialNumber = Convert.ToInt32(DB.DataTable.Rows[Index]["SerialNumber"]);
                 mStockList.Add(AnStock);
                 Index++;
             }
